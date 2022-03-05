@@ -11,7 +11,7 @@ import { Observable,BehaviorSubject } from 'rxjs';
 export class AuthService {
   AUTH_SERVER:string='link del servidor';
   authSubject=new BehaviorSubject(false);
-  private token:string;
+  private token:any;
   constructor(private httpClient:HttpClient) {}
   register(user:IUser):Observable<IJWTResponse>
   {
