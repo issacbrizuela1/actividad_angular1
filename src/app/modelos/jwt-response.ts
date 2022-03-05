@@ -2,10 +2,10 @@ export interface IJWTResponse {
     datauser:
     {
         id:number,
-        nombre:String,
-        tipo:String,
-        email:String,
-        accessToken:String,
-        expireIn:String
+        nombre:string,
+        tipo:string,
+        email:string,
+        accessToken:string,
+        expireIn:string
     }
 }
