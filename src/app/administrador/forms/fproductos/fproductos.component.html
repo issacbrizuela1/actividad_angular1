@@ -1,0 +1,31 @@
+<app-menuad></app-menuad>
+<div class="container">
+    <h1 class="text-center">ALTA PRODUCTO</h1>
+    <hr>
+    <form class="text-primary">
+        <label class="control-label" for="nom">Nombre:</label>
+        <input type="text" name="nom" placeholder="Escribe Nombre..." class="form-control" required>
+        <label class="control-label" for="mar">Marca:</label>
+        <input type="text" name="mar" placeholder="Escribe Marca..." class="form-control" required>
+        <label class='control-labe'>CATEGORIA:</label>
+        <select name='cate' class='form-select'>
+            <option value="Tenis">Tenis</option>
+        </select>
+        <label class="control-label" for="Color">Color:</label>
+        <input type="text" name="Color" placeholder="Escribe Color..." class="form-control" required>
+        <label class='control-labe'>Proveedor:</label>
+        <select name='pv' class='form-select'>
+            <option value="Juan">Juan</option>
+        </select>
+        <label class='control-labe'>Genero:</label>
+        <select name='gen' class='form-select'>
+            <option value="Infatil">Infatil</option>
+        </select>
+        <label class="control-label" for="pre">PRECIO:</label>
+        <input type="number" name="pre" placeholder="Escribe Precio..." class="form-control" required><br>
+        <div class="d-grid gap=2">
+            <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
+        </div>
+    </form>
+</div><br><br>
+<app-footer></app-footer>

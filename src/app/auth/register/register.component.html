@@ -1,1 +1,17 @@
-<p>register works!</p>
+<body>
+    <div class="login container cuad">
+      <div class="login-triangle ret"></div>
+    
+      <h2 class="login-header text-center">Log in</h2>
+    
+      <form #frmReg="ngForm" (ngSubmit)="onRegis(frmReg)" class="login-container">
+        <div class="input-group">
+          <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Recipient's username"
+            aria-describedby="basic-addon2" ngModel required>
+          <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div> <br>
+        <input type="password" class="form-control" placeholder="Password" name="password" ngModel required><br>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+  </body>

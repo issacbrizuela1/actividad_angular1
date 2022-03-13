@@ -1,15 +1,17 @@
-<div class="login">
-  <div class="login-triangle"></div>
-
-  <h2 class="login-header">Log in</h2>
-
-  <form
-    #frmLogin="ngForm"
-    (ngSubmit)="onLogin(frmLogin)"
-    class="login-container"
-  >
-    <p><input name="email" type="email" placeholder="Email" ngModel required /></p>
-    <p><input name="password" type="password" placeholder="Password" ngModel required/></p>
-    <p><input type="submit" value="entrar" /></p>
-  </form>
-</div>
+<body>
+  <div class="login container cuad">
+    <div class="login-triangle ret"></div>
+  
+    <h2 class="login-header text-center">Log in</h2>
+  
+    <form #frmLogin="ngForm" (ngSubmit)="onLogin(frmLogin)" class="login-container">
+      <div class="input-group">
+        <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Recipient's username"
+          aria-describedby="basic-addon2" ngModel required>
+        <span class="input-group-text" id="basic-addon2">@example.com</span>
+      </div> <br>
+      <input type="password" class="form-control" placeholder="Password" name="password" ngModel required><br>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+  </div>
+</body>

@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   onLogin(x:any): void {
     this.authService.login(x.value).subscribe(res=>{
-      this.router.navigateByUrl('/auth');
+      this.router.navigateByUrl('/inicio');
     });
   }
 }
