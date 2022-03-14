@@ -13,12 +13,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Jose</td>
-            <td>jose123@gmail.com</td>
-            <td>Admin</td>
-            <td>Activo</td>
+          <tr *ngFor="let usu of posts">
+            <th scope="row">{{usu.id}}</th>
+            <td>{{usu.username}}</td>
+            <td>{{usu.email}}</td>
+            <td>{{usu.tipo_usuario}}</td>
+            <td>{{usu.estado}}</td>
             <td>
               <a class="btn btn-primary" aria-disabled="true">Editar</a>
               <a class="btn btn-danger">Borrar</a>

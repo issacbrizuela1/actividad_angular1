@@ -14,13 +14,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Adidas</td>
-            <td>Juan</td>
-            <td>juan123@gmail.com</td>
-            <td>8712338047</td>
-            <td>Residencial del Nazas</td>
+          <tr *ngFor="let pro of posts">
+            <th scope="row">{{pro.id_proveedor}}</th>
+            <td>{{pro.nombre_empresa}}</td>
+            <td>{{pro.nombre_contacto}}</td>
+            <td>{{pro.correo}}</td>
+            <td>{{pro.telefono}}</td>
+            <td>{{pro.direccion}}</td>
             <td>
               <a class="btn btn-primary" aria-disabled="true">Editar</a>
               <a class="btn btn-danger">Borrar</a>

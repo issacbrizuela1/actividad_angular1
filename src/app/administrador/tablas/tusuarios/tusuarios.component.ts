@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioServicio } from 'src/app/services/usuario/usuario';
+import { UsuarioServiceService } from 'src/app/services/usuario/usuario-service.service';
 
 @Component({
   selector: 'app-tusuarios',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tusuarios.component.css']
 })
 export class TusuariosComponent implements OnInit {
-
-  constructor() { }
-
+  posts: UsuarioServicio[]=[];
+  constructor(private ser:UsuarioServiceService) { 
+    this.ser.getdata().subscribe(data=>
+      {
+        this.posts=data;
+      });
+  }
   ngOnInit(): void {
   }
 

@@ -12,11 +12,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Migguel</td>
-            <td>Juan</td>
-            <td>18000</td>
+          <tr *ngFor="let en of posts">
+            <th scope="row">{{en.id_encargo}}</th>
+            <td>{{en.usuario}}</td>
+            <td>{{en.proveedor}}</td>
+            <td>{{en.total}}</td>
             <td>
               <a class="btn btn-primary" aria-disabled="true">Aceptar</a>
               <a class="btn btn-danger">Borrar</a>

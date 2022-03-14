@@ -10,9 +10,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Tenis</td>
+          <tr *ngFor="let cat of posts">
+            <th scope="row">{{cat.id_categoria}}</th>
+            <td>{{cat.nombre}}</td>
             <td>
               <a class="btn btn-primary" aria-disabled="true">Editar</a>
               <a class="btn btn-danger">Borrar</a>

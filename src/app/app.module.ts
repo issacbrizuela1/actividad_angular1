@@ -18,6 +18,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './empleado/inicio/inicio.component';
 import { ProductoServiceService } from './services/productos/producto-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriaServiceService } from './services/categoria/categoria-service.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductoServiceService],
+  providers: [ProductoServiceService,CategoriaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
