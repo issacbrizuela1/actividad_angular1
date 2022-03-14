@@ -11,5 +11,5 @@ export class FcategoriaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

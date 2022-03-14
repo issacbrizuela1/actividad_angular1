@@ -16,6 +16,8 @@ import { FproovedoresComponent } from './administrador/forms/fproovedores/fproov
 import { MenuadComponent } from './componentes/menuad/menuad.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './empleado/inicio/inicio.component';
+import { ProductoServiceService } from './services/productos/producto-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { InicioComponent } from './empleado/inicio/inicio.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductoServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

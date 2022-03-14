@@ -9,7 +9,7 @@ import { Observable,BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  AUTH_SERVER:string='link del servidor';
+  AUTH_SERVER:string='http://127.0.0.1:3333';
   authSubject=new BehaviorSubject(false);
   private token:any;
   constructor(private httpClient:HttpClient) {}
@@ -25,7 +25,7 @@ export class AuthService {
   }
   login(user:IUser):Observable<IJWTResponse>
   {
-    return this.httpClient.post<IJWTResponse>('${this.AUTH_SERVER}/login',user).pipe(tap((res:IJWTResponse)=>{
+    return this.httpClient.post<IJWTResponse>('http://127.0.0.1:3333/comp',user).pipe(tap((res:IJWTResponse)=>{
       if(res)
       {
         //guardar token
