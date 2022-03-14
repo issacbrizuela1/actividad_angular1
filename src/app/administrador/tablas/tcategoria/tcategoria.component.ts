@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriaServicio } from 'src/app/services/categoria/categoria';
-import { CategoriaServiceService } from 'src/app/services/categoria/categoria-service.service';
+import { Categoria } from 'src/app/modelos/categoria';
+import { CategoriaService } from 'src/app/services/categorias/categoria.service';
+
 
 @Component({
   selector: 'app-tcategoria',
@@ -8,8 +9,8 @@ import { CategoriaServiceService } from 'src/app/services/categoria/categoria-se
   styleUrls: ['./tcategoria.component.css']
 })
 export class TcategoriaComponent implements OnInit {
-  posts: CategoriaServicio[]=[];
-  constructor(private ser:CategoriaServiceService) { 
+  posts: Categoria[]=[];
+  constructor(private ser:CategoriaService) { 
     this.ser.getdata().subscribe(data=>
       {
         this.posts=data;

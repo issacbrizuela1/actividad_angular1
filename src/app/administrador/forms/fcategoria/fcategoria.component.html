@@ -1,13 +1,79 @@
 <app-menuad></app-menuad>
-<div class="container" style="margin-top: 80px;">
-    <h1 class="text-center">ALTA CATEGORIA</h1>
-    <hr class="textcol">
-    <form action="" class="text-primary">
-        <label class="control-label" for="nom">NOMBRE:</label>
-        <input type="text" name="nom" placeholder="Escribe Nombre..." class="form-control" required><br>
-        <div class="d-grid gap=2">
-            <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
+<div class="container" style="margin-top: 80px">
+  <h1 class="text-center">ALTA CATEGORIA</h1>
+  <hr class="textcol" />
+  <form action="" class="text-primary">
+    <label class="control-label" for="nom">NOMBRE:</label>
+    <input
+      type="text"
+      name="nom"
+      placeholder="Escribe Nombre..."
+      class="form-control"
+      required
+    /><br />
+    <div class="d-grid gap=2">
+      <button class="btn btn-primary btn-lg" type="submit">Guardar</button>
+    </div>
+  </form>
+  <div class="card mt-5">
+    <div class="card-body">
+      <form #categoriaForm="ngForm" (ngSubmit)="onSubmit(categoriaForm)">
+        <!-- TO UPDATE -->
+        <input
+          type="hidden"
+          name="id_categoria"
+          #id_categoria="ngModel"
+          [(ngModel)]="categoriaService.selectedCategoria.id_categoria"
+        />
+
+        
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            #nombre="ngModel"
+            [(ngModel)]="categoriaService.selectedCategoria.nombre"
+            placeholder="Add A Product"
+          />
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-plus-circle"></i> Add A Product
+          </button>
+          <button
+            class="btn btn-secondary"
+            type="reset"
+            (click)="resetForm(categoriaForm)"
+          >
+            <i class="fas fa-sync-alt"></i> Reset
+          </button>
         </div>
-    </form>
-</div><br><br><br><br><br><br>
+      </form>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h6 class="text-center">List of Products</h6>
+      <table class="table table-sm table-hover">
+        <tbody>
+          <tr *ngFor="let cat of categoria">
+            <td>{{ cat.id_categoria }}</td>
+            <td>{{ cat.nombre }}</td>
+            <td>
+              <a class="btn btn-secondary text-white" (click)="onEdit(cat)">
+                <i class="far fa-edit"></i>
+              </a>
+              <a
+                class="btn btn-danger text-white"
+                (click)="onDelete(cat.id_categoria)"
+              >
+                <i class="fas fa-trash-alt"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br /><br /><br /><br /><br /><br />
 <app-footer></app-footer>
