@@ -19,6 +19,7 @@ import { InicioComponent } from './empleado/inicio/inicio.component';
 import { ProductoServiceService } from './services/productos/producto-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriaService } from './services/categorias/categoria.service';
+import { EncargoServiceService } from './services/encargo/encargo-service.service';
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { CategoriaService } from './services/categorias/categoria.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductoServiceService,CategoriaService],
+  providers: [ProductoServiceService,CategoriaService,EncargoServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

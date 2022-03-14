@@ -12,7 +12,7 @@ export class EncargoServiceService {
   }
   getdata()
   {
-    return this.httpClient.get<EncargoServicio[]>("http://127.0.0.1:3333/Encargos");
+    return this.httpClient.get<EncargoServicio[]>("http://127.0.0.1:3333/mostrarEncargos");
   }
   getdatausuario()
   {
