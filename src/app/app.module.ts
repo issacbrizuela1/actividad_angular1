@@ -20,6 +20,9 @@ import { ProductoServiceService } from './services/productos/producto-service.se
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriaService } from './services/categorias/categoria.service';
 import { EncargoServiceService } from './services/encargo/encargo-service.service';
+import { ProveedoresServiceService } from './services/proveedores/proveedores-service.service';
+import { UsuarioServiceService } from './services/usuario/usuario-service.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -46,7 +49,15 @@ import { EncargoServiceService } from './services/encargo/encargo-service.servic
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductoServiceService,CategoriaService,EncargoServiceService],
+  providers: [
+    ProductoServiceService,
+    CategoriaService,
+    EncargoServiceService,
+    ProductoServiceService,
+    ProveedoresServiceService,
+    UsuarioServiceService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
